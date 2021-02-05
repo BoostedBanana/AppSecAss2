@@ -10,6 +10,10 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Data;
 using System.Data.SqlClient;
+using System.Net;
+using System.IO;
+using System.Web.Script.Serialization;
+using System.Web.Services;
 
 namespace AppSecAss2
 {
@@ -217,6 +221,38 @@ namespace AppSecAss2
             finally { }
             return cipherText;
         }
+
+        /* public class MyObject
+        {
+            public string success { get; set; }
+            public List<string> ErrorMessage { get; set; }
+        }
+        public bool ValidateCaptcha()
+        {
+            bool result = true;
+            string captchaResponse = Request.Form["g-recaptcha-response"];
+            HttpWebRequest req = (HttpWebRequest)WebRequest.Create("https://www.google.com/recaptcha/api/siteverify?secret=6LfNCksaAAAAALf40ZGDO3vuFaC4sB3W7UADxzPZ &response=" + captchaResponse);
+
+            try
+            {
+                using (WebResponse wResponse = req.GetResponse())
+                {
+                    using (StreamReader readStream = new StreamReader(wResponse.GetResponseStream()))
+                    {
+                        string jsonResponse = readStream.ReadToEnd();
+                        lbl_gScore.Text = jsonResponse.ToString();
+                        JavaScriptSerializer js = new JavaScriptSerializer();
+                        MyObject myObject = js.Deserialize<MyObject>(jsonResponse);
+                        result - Convert.ToBoolean(jsonObject.success);
+                    }
+                }
+                return result;
+            }
+            catch (WebException ex)
+            {
+                throw ex;
+            }
+        }*/
 
 
 

@@ -22,7 +22,7 @@
             margin-left: 41px;
         }
     </style>
-    <script src="https://www.google.com/recaptcha/api.js?render=6Ld2WUoaAAAAAK-febwNc4ijeeE7sYVRMCKkzie-"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LfNCksaAAAAALf40ZGDO3vuFaC4sB3W7UADxzPZ"></script>
     <script type="text/javascript">
         function validate() {
             var str = document.getElementById('<%=tbPassword.ClientID %>').value;
@@ -179,7 +179,7 @@
     </form>
     <script>
         grecaptcha.ready(function () {
-            grecaptcha.execute('6Ld2WUoaAAAAAK-febwNc4ijeeE7sYVRMCKkzie-', { action: 'Login' }).then(function (token) {
+            grecaptcha.execute('6LfNCksaAAAAALf40ZGDO3vuFaC4sB3W7UADxzPZ', { action: 'Login' }).then(function (token) {
                 document.getElementById("g-recaptcha-response").value = token;
             });
         });
